@@ -1,0 +1,89 @@
+// colours
+$color-navy-blue: #001b49;
+$color-lightest-navy-blue: #D0D7DD;
+$color-dark-gray: #464B4F;
+$color-mid-gray: #757C82;
+$color-light-gray: #C5CCd1;
+$color-lightest-gray: #dcdcdc;
+$color-lightest-most-gray: #fafafa;
+$color-sky-blue: #34BCEF;
+$color-light-sky-blue: #F3F9FD;
+$color-lime-green: #ADCA4A;
+$color-lemon-yellow: #F6D630;
+$color-grape-purple: #60308C;
+$color-sea-blue: #2D4F9D;
+$color-forest-green: #33A357;
+$color-desert-orange: #E4A330;
+$color-charcoal-grey: #434b52;
+$color-stale: rgb(84, 97, 122);
+$color-blackish: #2f2f2f;
+$color-pale-grey: #eaeff2;
+
+$primary-light: $color-stale;
+$primary-lighter: rgba(74, 144, 226, 0.05);
+$primary-semi-dark: rgb(45, 79, 157);
+$secondary-color: #cfd7db;
+$color-pale: rgb(246, 250, 251);
+$font-colour: $primary-light;
+$font-colour-grey: rgba(0, 0, 0, 0.65);
+$font-colour-grey-light: rgb(155, 162, 177);
+$background-colour: #F8F8F8;
+$table-text-colour: $color-mid-gray;
+$colour-text-primary: $color-dark-gray;
+$colour-text-secondary: $color-mid-gray;
+$colour-text-tertiary: $color-light-gray;
+$colour-href: $color-sea-blue;
+$colour-line: #dcdcdc;
+
+$color-primary: rgba(122, 231, 199, 1);
+$color2: rgba(117, 187, 167, 1);
+$color3: rgba(108, 128, 154, 1);
+$color-tertiary: rgba(121, 86, 99, 0.9);
+$color-secondary: rgba(100, 82, 68, 1);
+
+$COLORS: (
+  color-primary: $color-primary,
+  color-secondary: $color-secondary,
+  color-tertiary: $color-tertiary,
+  navy-blue:$color-navy-blue,
+  dark-gray:$color-dark-gray,
+  mid-gray:$color-mid-gray,
+  light-gray:$color-light-gray,
+  lightest-gray:$color-lightest-gray,
+  lightest-most-gray:$color-lightest-most-gray,
+  charcoal-grey:$color-charcoal-grey,
+  lightest-navy-blue:$color-lightest-navy-blue,
+  sky-blue:$color-sky-blue,
+  light-sky-blue:$color-light-sky-blue,
+  lime-green:$color-lime-green,
+  lemon-yellow:$color-lemon-yellow,
+  grape-purple:$color-grape-purple,
+  sea-blue:$color-sea-blue,
+  forest-green:$color-forest-green,
+  desert-orange:$color-desert-orange,
+);
+
+@each $name, $value in $COLORS {
+  %color--#{$name} {
+    color: $value;
+  }
+}
+
+@mixin createColorClasses($property, $withHover:false) {
+  @each $name, $value in $COLORS {
+    &.color-#{$name} {
+      #{$property}: $value;
+      @if ($withHover) {
+        @include hover-lighten($property,$value);
+      }
+    }
+  }
+}
+
+@mixin createColors() {
+  @each $name, $value in $COLORS {
+    .color--#{$name} {
+      color: $value;
+    }
+  }
+}

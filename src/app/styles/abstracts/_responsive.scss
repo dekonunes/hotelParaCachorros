@@ -1,0 +1,152 @@
+$widget-width: 416px;
+$gutter: 32px;
+
+$screen-xs: 320px;
+$screen-sm: ($widget-width * 1) + (2 * $gutter);
+$screen-md: ($widget-width * 2) + (3 * $gutter);
+$screen-lg: ($widget-width * 3) + (4 * $gutter);
+$screen-xl: ($widget-width * 4) + (5 * $gutter);
+$screen-xxl: ($widget-width * 5) + (6 * $gutter);
+$screen-inf: 100000px;
+
+@mixin xs {
+  @media (min-width: 100px) and(max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin xs-and-up {
+  @media (min-width: 100px) {
+    @content;
+  }
+}
+
+@mixin xs-and-down {
+  @media (max-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-xs +1}) and(max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin sm-and-down {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin sm-and-up {
+  @media (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-sm +1}) and(max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin md-and-down {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin md-and-up {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-md +1}) and(max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin lg-and-down {
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin lg-and-up {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-lg +1}) and (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xl-and-down {
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xl-and-up {
+  @media (min-width: #{$screen-lg }) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: #{$screen-xl +1}) and (max-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin xxl-and-down {
+  @media (max-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin xxl-and-up {
+  @media (min-width: #{$screen-xl }) {
+    @content;
+  }
+}
+@mixin inf {
+  @media (min-width: #{$screen-xxl +1}) and (max-width: #{$screen-inf}) {
+    @content;
+  }
+}
+
+@mixin inf-and-down {
+  @media (max-width: #{$screen-inf}) {
+    @content;
+  }
+}
+
+@mixin inf-and-up {
+  @media (min-width: #{$screen-xxl }) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
