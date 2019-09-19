@@ -1,0 +1,56 @@
+.footer {
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 20rem;
+		font-family: "Arvo", serif;
+		background-color: var(--color-grey-dark-1);	
+    }
+    
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
+	&__social-medias {
+		display: flex;
+		justify-content: space-around;
+		font-size: 2.2rem;
+		margin: 0 60rem;
+	}
+
+	&__copyright {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: var(--color-grey-dark-3);
+		margin-bottom: 2rem;
+
+		a {
+			&:link,
+			&:visited {
+				color: var(--color-grey-light-1);
+				text-decoration: none;
+				text-transform: uppercase;
+				display: inline-block;
+				transition: all 0.2s;
+			}
+
+			&:hover,
+			&:active {
+				color: green;
+				box-shadow: 0 1rem 2rem rgba(black, 0.4);
+				transform: translate(20px) rotate(-7deg) scale(1.4);
+			}
+		}
+	}
+}

@@ -15,11 +15,16 @@ body {
 
 	@include respond(tab-port) {
 		padding: 0;
-    }
+	}
 	box-sizing: border-box;
 }
 
 ol,
 ul {
 	list-style: none;
+}
+
+a,
+a:active {
+	text-decoration: none;
 }
