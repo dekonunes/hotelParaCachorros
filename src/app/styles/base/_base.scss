@@ -12,7 +12,7 @@ html {
 
 body {
 	padding: 3rem;
-
+    background-color: #fbfbfbfb;
 	@include respond(tab-port) {
 		padding: 0;
 	}
