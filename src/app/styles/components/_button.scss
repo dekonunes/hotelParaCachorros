@@ -1,0 +1,39 @@
+%button {
+  text-align: center;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+  
+@mixin button($_color: var(--color-primary), $_type:'outline') {
+  @extend %button;
+  transition: all 200ms linear;
+  @if ($_type == 'raised') {
+    color: white;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    background-color: $_color;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  @if ($_type=='outline') {
+    color: $_color;
+    border: 1px solid $_color;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    background-color: white;
+    line-height: 32px;
+    font-weight: 600;
+    &:hover {
+      background: $_color;
+      color: white;
+    }
+    &:active {
+      background: var(--color-light-gray);
+      color: $_color;
+    }
+  }
+}
+  
