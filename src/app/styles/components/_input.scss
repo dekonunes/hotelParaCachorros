@@ -1,5 +1,4 @@
 @mixin input($height, $radius: 5px, $margin: 1em, $border: 1px) {
-	display: flex;
 	$borders: ($border * 2);
 	box-sizing: border-box;
 	width: 100%;
