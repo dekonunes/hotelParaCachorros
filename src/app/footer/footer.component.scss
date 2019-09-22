@@ -47,7 +47,7 @@
 
 			&:hover,
 			&:active {
-				color: green;
+				color: var(--color-primary);
 				box-shadow: 0 1rem 2rem rgba(black, 0.4);
 				transform: translate(20px) rotate(-7deg) scale(1.4);
 			}
