@@ -1,20 +1,25 @@
+@import "abstracts/responsive";
+
 .footer {
+    width: 100%;
 	&__grid {
 		display: flex;
 		flex-wrap: wrap;
 		align-content: center;
 		justify-content: space-between;
 		flex-direction: column;
-		height: 20rem;
-		font-family: "Arvo", serif;
+        height: 24rem;
+        
+        @include respond(phone) {
+            height: 28rem;
+        }
 		background-color: var(--color-grey-dark-1);	
     }
     
     &__header {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
         font-size: 2.2rem;
         font-weight: 600;
         margin-top: 2rem;
@@ -24,16 +29,28 @@
 	&__social-medias {
 		display: flex;
 		justify-content: space-around;
-		font-size: 2.2rem;
-		margin: 0 60rem;
-	}
+		font-size: 2.2rem;        
+        a {
+            margin-left: 2rem; 
+        }
+    }
+    
+    &__address {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
 
 	&__copyright {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		color: var(--color-grey-dark-3);
-		margin-bottom: 2rem;
+		margin-bottom: 2%;
 
 		a {
 			&:link,
