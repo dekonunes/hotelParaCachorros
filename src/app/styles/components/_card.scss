@@ -1,4 +1,4 @@
-%card {
+@mixin card {
 	box-shadow: var(--shadonw-card);
 	border-radius: 5px;
 	overflow: hidden;

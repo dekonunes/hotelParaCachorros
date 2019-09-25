@@ -1,10 +1,16 @@
+@import "abstracts/responsive";
+
 .gallery {
 	background: radial-gradient(var(--color-grey-light-4), var(--color-grey-light-1));
 	grid-column: full-start / full-end;
 	display: grid;
 	grid-template: repeat(7, 5vw) / repeat(8, 1fr);
 	grid-gap: 1.5rem;
-	padding: 1.5rem;
+    padding: 1.5rem;
+    
+    @include respond(phone) {
+        grid-gap: .5rem;
+    }
 }
 .gallery__item--1 {
 	grid-row: 1 / span 2;

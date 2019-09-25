@@ -1,48 +1,61 @@
 @import "components/input";
 @import "components/card";
 @import "components/button";
+@import "abstracts/responsive";
 
 .contact {
 	&__grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		&--img {
-			@extend %card;
+		height: 550px;
+
+		@include md-and-down {
+            grid-template-columns: 1fr;
+		}
+	}
+
+	@include lg-and-up {
+		&__img {
+			@include card;
+			background-image: url("../../assets/img/xicara.jpg");
+			background-position: center;
+			background-size: cover;
 			width: 90%;
-			margin: 2rem auto;
-			img {
-				width: 100%;
-			}
+			margin: 2em auto;
 		}
 	}
 
 	&__form {
 		display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-		@extend %card;
+		flex-direction: column;
+		justify-content: space-between;
+		@include card;
 		width: 90%;
-        margin: 2rem auto;
-        padding: 2rem 4rem;
+		margin: 2em auto;
+		padding: 2em 4em;
 		border: 0.5px solid var(--color-grey-light-2);
 
 		&--text {
-			font-size: 2.2rem;
+			font-size: 2.2em;
 			color: black;
 		}
-    }
-    
-    &__btn {
-        @include button();
-    }
+	}
+
+	&__btn {
+		@include button();
+	}
 }
 
 input {
-	@include input(3em);
+	$size: 40px;
+	@include input(26px);
+	max-height: $size;
+	min-height: $size;
 }
 
 textarea {
-    @include input(14.5em);
-    max-height: 15rem;
-	min-height: 15rem;
+	$size: 114px;
+	@include input(107px);
+	max-height: $size;
+	min-height: $size;
 }

@@ -3,7 +3,6 @@
 .team {
 	&__title {
 		font-size: 4rem;
-		margin-top: 6rem;
 	}
 
 	&:hover &__caption {
@@ -15,7 +14,7 @@
 		display: grid;
 		justify-items: center;
 		width: 100%;
-		height: 70vh;
+		height: 70%;
 		background-color: var(--color-primary);
 		font-family: "Arvo", serif;
 	}
@@ -23,12 +22,14 @@
 	&__cards {
         display: grid;
         width: 90%;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
         justify-items: center;
+        margin-bottom: 2%;
     }
     
     &__card {
-        @extend %card;
+        @include card;
         display: flex;
         flex-direction: column;
         align-items: center;

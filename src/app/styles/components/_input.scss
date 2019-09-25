@@ -49,7 +49,8 @@
 				pointer-events: none;
 				line-height: $margin * 1.25;
 				margin-top: calc(-#{$height} - #{$borders});
-				margin-bottom: calc((#{$height} - #{$margin}) + #{$borders});
+                margin-bottom: calc((#{$height} - #{$margin}) + #{$borders});
+                font-size: 11px;
 				&:before {
 					content: attr(placeholder);
 					display: inline-block;
