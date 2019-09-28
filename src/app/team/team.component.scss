@@ -39,6 +39,12 @@
 		@include respond(phone) {
 			grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
 			grid-gap: 2rem 0rem;
+        }
+        
+        @include xs {
+            width: 98%;
+			grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+			grid-gap: 2rem 0rem;
 		}
 
 		justify-items: center;
@@ -60,7 +66,13 @@
 		}
 
 		height: 35rem;
-		padding: 1rem;
+        padding: 1rem;
+        
+        @include xs {
+            width: 19rem;
+            padding: 0.5rem;
+		}
+
 		h2 {
 			margin-top: 1rem;
 		}
