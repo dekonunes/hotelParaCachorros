@@ -1,0 +1,14 @@
+@mixin border-effect($_background: white, $_direction: left) {
+	@if ($_direction == "left") {
+		transform: skew(2deg, 2deg);
+	}
+	@if ($_direction == "right") {
+		transform: skew(-2deg, -2deg);
+	}
+	content: "";
+	position: absolute;
+	width: stretch;
+	height: stretch;
+	background: $_background;
+	z-index: -1;
+}
