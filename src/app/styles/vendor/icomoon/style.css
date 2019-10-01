@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?3idor');
-  src:  url('fonts/icomoon.eot?3idor#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?3idor') format('truetype'),
-    url('fonts/icomoon.woff?3idor') format('woff'),
-    url('fonts/icomoon.svg?3idor#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?hn4cg3');
+  src:  url('fonts/icomoon.eot?hn4cg3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hn4cg3') format('truetype'),
+    url('fonts/icomoon.woff?hn4cg3') format('woff'),
+    url('fonts/icomoon.svg?hn4cg3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -40,4 +40,7 @@
 .icon-youtube:before {
   content: "\e902";
   color: #f00;
+}
+.icon-circle-up:before {
+  content: "\ea41";
 }
