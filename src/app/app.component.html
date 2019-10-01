@@ -1,7 +1,13 @@
-<app-header></app-header>
+<app-header id="header"></app-header>
 <app-cards></app-cards>
 <app-gallery></app-gallery>
 <app-team></app-team>
 <app-contact></app-contact>
-<img src="assets/img/map.png" alt="Mapa com a localizacao do local" loading="lazy">
+<picture>
+    <source srcset="assets/img/map-mobile.png" media="(max-width: 500px)">
+    <source srcset="assets/img/map-tablet.png" media="(max-width: 1024px)">
+    <source srcset="assets/img/map.png">
+    <img src="assets/img/map.png" alt="Mapa com a localizacao do local">
+</picture>
 <app-footer></app-footer>
+<i (click)="scrollToTop()" class="icon-circle-up scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}"></i>
